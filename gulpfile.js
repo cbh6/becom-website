@@ -10,6 +10,7 @@ var
 	include     = require("gulp-include"),
 	del 				= require('del'),
 	less				= require('gulp-less'),
+	sass 				= require('gulp-sass'),
 	LessPluginCleanCSS = require('less-plugin-clean-css'),
   LessPluginAutoPrefix = require('less-plugin-autoprefix');
 
@@ -18,6 +19,7 @@ var
 	srcDir 		= 'src/',
 	buildDir	= 'build/',
 	assetsDir = buildDir + 'assets/',
+	sassFiles = '/styles/sass/**/*.scss',
 	cleancss = new LessPluginCleanCSS({
 		advanced: true
 	}),
@@ -25,8 +27,14 @@ var
 		browsers: ["last 2 versions"]
 	});
 
+gulp.task('sass', function(){
+  return gulp.src(srcDir + '/styles/sass/**/*.scss')
+      .pipe(sass().on('error', sass.logError))
+      .pipe(gulp.dest(assetsDir + 'css'));
+});
+
 gulp.task('less', function(){
-		return gulp.src(srcDir + 'less/main.less')
+		return gulp.src(srcDir + '/styles/less/**/*.less')
 			.pipe(less({
 			    plugins: [autoprefix, cleancss]
 			  }))
@@ -36,7 +44,7 @@ gulp.task('less', function(){
 			})
 		  .pipe(gulp.dest(assetsDir + 'css'))
 			.pipe(connect.reload());
-	});
+});
 
 gulp.task('js', function(){
 	return gulp.src(srcDir + 'js/**/*.js')
@@ -72,7 +80,7 @@ gulp.task('clean', function() {
 
 // Call Watch
 gulp.task('monitor', function(){
-	gulp.watch(srcDir + 'less/**/*.less', ['less']);
+	gulp.watch(srcDir + 'styles/sass/**/*.sass', ['sass']);
 	gulp.watch(srcDir + 'js/**/*.js', ['js']);
 	gulp.watch(srcDir + 'html/**/*.html', ['html']);
 	gulp.watch(srcDir + 'img/**/*.{jpg,png,gif}', ['img']);
@@ -98,4 +106,4 @@ gulp.task('connect', function() {
 gulp.task('watch', ['default', 'connect', 'monitor']);
 
 // Default task
-gulp.task('default', ['less', 'js', 'img', 'html']);
+gulp.task('default', ['sass', 'js', 'html']);
