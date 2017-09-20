@@ -84,7 +84,7 @@ gulp.task('monitor', function(){
 	gulp.watch(srcDir + 'styles/sass/**/*.scss', ['sass']);
 	gulp.watch(srcDir + 'js/**/*.js', ['js']);
 	gulp.watch(srcDir + 'html/**/*.html', ['html']);
-	gulp.watch(srcDir + 'img/**/*.{jpg,png,gif,jpeg}', ['img']);
+	gulp.watch(srcDir + 'img/**/*.{jpg,png,gif}', ['img']);
 });
 
 // Connect (Livereload)
@@ -107,4 +107,4 @@ gulp.task('connect', function() {
 gulp.task('watch', ['default', 'connect', 'monitor']);
 
 // Default task
-gulp.task('default', ['sass', 'js', 'html', 'img']);
+gulp.task('default', ['sass', 'js', 'html']);
