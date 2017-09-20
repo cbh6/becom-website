@@ -1,3 +1,20 @@
 @import '../../../node_modules/bootstrap/scss/bootstrap';
 @import '../../../lib/PaperKit/sass/paper-kit';
 @import url('https://fonts.googleapis.com/css?family=Muli');
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, a, .td-name, td, button, input, select, textarea {
+  font-family: 'Muli', sans-serif;
+}
+.navbar-brand>img {
+  height: 75px;
+  width: 200px;
+}
+
+.navbar .navbar-brand {
+  margin: auto;
+  padding: 10px 0px 10px 0px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    font-size: 14px;
+  }
