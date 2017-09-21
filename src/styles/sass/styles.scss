@@ -16,5 +16,20 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, a, .td
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
-    font-size: 14px;
-  }
+  font-size: 14px;
+}
+
+.page-header {
+  min-height: 600px;
+  height: 800px;
+}
+
+.modal-photo, .modal-info {
+   background-color: #FFF;
+
+   padding: 24px 0px 24px 0px;
+   width: 50%;
+   height: 200%;
+   position: relative;
+   display: none;
+}

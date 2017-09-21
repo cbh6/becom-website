@@ -18,55 +18,6 @@ $(window).on('load', function() {
   AOS.init();
 });
 
-$(".miembro").click(function() {
-  var openW = 100;
-  var mySize = parseInt($(".verPerfilInfo").css("top"));
-  if (mySize == 0) openW = 50;
-  var bgPerfil = $(this).find('img').attr("src");
-  var nomPerfil = $(this).find('img').attr("alt");
-  var cargoPerfil = $(this).find('img').attr("cargo");
-  var bio = $(this).index();
-  //var getBio = $(".bios .bio:eq("+bio+")").html();
-  $(".verPerfil").css("background-image", "url(" + bgPerfil + ")");
-  $(".L1").text(nomPerfil);
-  //$(".L2").html(getBio);
-  $(".L3").text(cargoPerfil);
-  $(".verPerfil, .verPerfilInfo").stop().animate({
-    'width': openW + "%"
-  }, {
-    duration: 500,
-    queue: true,
-    easing: 'swing',
-    complete: function() {}
-  });
-  $(".header").stop().animate({
-    'top': "-120px"
-  }, {
-    duration: 500,
-    queue: true,
-    easing: 'swing',
-    complete: function() {}
-  });
-});
-
-$(".closePerfil").click(function() {
-  $(".verPerfil, .verPerfilInfo").stop().animate({
-    'width': "0%"
-  }, {
-    duration: 300,
-    queue: true,
-    easing: 'easeOutExpo',
-    complete: function() {}
-  });
-  $(".header").stop().animate({
-    'top': "0px"
-  }, {
-    duration: 300,
-    queue: true,
-    easing: 'swing',
-    complete: function() {}
-  });
-});
 
 function onViewport(el, elClass, offset, callback) {
   /*** Based on http://ejohn.org/blog/learning-from-twitter/ ***/
@@ -102,3 +53,35 @@ function onViewport(el, elClass, offset, callback) {
     }
   }, 100);
 }
+
+
+// Open
+$(document).on('click', '.card-profile', function() {
+    var name = $(this).data('info');
+    var photoTarget = '#modal-photo-' + name;
+    var infoTarget = '#modal-info-' + name;
+
+    var optionsPhoto = {
+      content: {
+        effect: 'slide',
+        target: photoTarget,
+        animateFrom: 'left',
+        positionX: 'left',
+      }
+    };
+    var optionsInfo = {
+      content: {
+        effect: 'slide',
+        target: infoTarget,
+        animateFrom: 'right',
+        positionX: 'right',
+      }
+    };
+
+    new Custombox.modal(optionsInfo).open();
+ 		new Custombox.modal(optionsPhoto).open();
+  });
+
+  $(document).on('click', '.custombox-content', function() {
+      Custombox.modal.closeAll();
+    });
