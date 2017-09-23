@@ -2,7 +2,8 @@
 @import '../../../lib/PaperKit/sass/paper-kit';
 @import url('https://fonts.googleapis.com/css?family=Muli');
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, a, .td-name, td, button, input, select, textarea {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, a, .td-name, td, button, input, select, textarea,
+.title, .card-title, .info-title, .footer-brand, .footer-big h5, .footer-big h4, .media .media-heading {
   font-family: 'Muli', sans-serif;
 }
 .navbar-brand>img {
@@ -32,4 +33,48 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, a, .td
    height: 200%;
    position: relative;
    display: none;
+   background-size:cover;
+}
+
+.cd-section {
+  padding: 70px 0 0 0;
+}
+
+.modal-photo {
+  background-size:cover
+}
+
+.space-top {
+  padding-top: 25%;
+}
+
+.closeButton {
+  float: right;
+  color: white;
+}
+
+
+
+
+.words {
+  color: #444;
+  font-size: 0;
+  line-height: 1;
+  span {
+    font-size: 120px;
+    display: inline-block;
+    animation: move 3s ease-in-out infinite;
+  }
+}
+
+@keyframes move {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

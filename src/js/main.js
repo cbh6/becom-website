@@ -56,32 +56,41 @@ function onViewport(el, elClass, offset, callback) {
 
 
 // Open
-$(document).on('click', '.card-profile', function() {
-    var name = $(this).data('info');
-    var photoTarget = '#modal-photo-' + name;
-    var infoTarget = '#modal-info-' + name;
+$(document).on('click', '.card-img-top', function() {
+  var name = $(this).data('info');
+  var photoTarget = '#modal-photo-' + name;
+  var infoTarget = '#modal-info-' + name;
 
-    var optionsPhoto = {
-      content: {
-        effect: 'slide',
-        target: photoTarget,
-        animateFrom: 'left',
-        positionX: 'left',
-      }
-    };
-    var optionsInfo = {
-      content: {
-        effect: 'slide',
-        target: infoTarget,
-        animateFrom: 'right',
-        positionX: 'right',
-      }
-    };
+  var optionsPhoto = {
+    content: {
+      effect: 'slide',
+      target: photoTarget,
+      animateFrom: 'left',
+      positionX: 'left',
+    }
+  };
+  var optionsInfo = {
+    content: {
+      effect: 'slide',
+      target: infoTarget,
+      animateFrom: 'right',
+      positionX: 'right',
+    }
+  };
 
-    new Custombox.modal(optionsInfo).open();
- 		new Custombox.modal(optionsPhoto).open();
-  });
+  new Custombox.modal(optionsInfo).open();
+  new Custombox.modal(optionsPhoto).open();
+});
 
-  $(document).on('click', '.custombox-content', function() {
-      Custombox.modal.closeAll();
-    });
+$(document).on('click', '.custombox-content', function() {
+  Custombox.modal.closeAll();
+});
+
+function smoothScroll(target) {
+  target = $(target);
+  $('body,html').animate({
+      'scrollTop': target.offset().top
+    },
+    600
+  );
+}
