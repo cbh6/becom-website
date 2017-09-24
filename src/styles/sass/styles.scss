@@ -1,7 +1,5 @@
-@import '../../../node_modules/bootstrap/scss/bootstrap';
-@import '../../../lib/PaperKit/sass/paper-kit';
 @import url('https://fonts.googleapis.com/css?family=Muli');
-
+@import url('https://fonts.googleapis.com/css?family=Days+One|PT+Sans+Caption:700');
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, a, .td-name, td, button, input, select, textarea,
 .title, .card-title, .info-title, .footer-brand, .footer-big h5, .footer-big h4, .media .media-heading {
   font-family: 'Muli', sans-serif;
@@ -22,7 +20,23 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, a, .td
 
 .page-header {
   min-height: 600px;
-  height: 800px;
+  height: 600px;
+}
+
+.header-title{
+  
+}
+
+.first-section {
+  padding: 30px 0 !important;
+
+}
+
+.delay-1{
+animation-delay:0.3s;
+}
+.delay-2{
+animation-delay:0.6s;
 }
 
 .modal-photo, .modal-info {
@@ -54,8 +68,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, a, .td
 }
 
 
-
-
 .words {
   color: #444;
   font-size: 0;
@@ -77,4 +89,17 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, a, .td
   100% {
     opacity: 1;
   }
+}
+
+.contact-us .contact .form-control {
+    margin-bottom: 20px;
+}
+
+.becom-background-color{
+  background-color: #b1d062;
+  border-color: #b1d062;
+}
+
+.becom-color{
+  color: #b1d062 !important;
 }
