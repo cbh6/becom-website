@@ -114,3 +114,12 @@ function initContactUsMap(){
     marker.setMap(map);
 
 }
+
+
+// $('.social-show').click(function() {
+//   $('.social').toggle(function() {
+//       $('.social').animate({
+//         left: 0
+//       });
+//     });
+// });
