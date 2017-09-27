@@ -19,9 +19,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, a, .td
 }
 
 @media(min-width: 1200px){
-.navbar-translate {
-  margin-left: -100px;
-}
+  .navbar-translate {
+    margin-left: -100px;
+  }
 }
 
 .page-header {
@@ -52,9 +52,9 @@ animation-delay:0.6s;
    background-size:cover;
 }
 
-.cd-section {
+/*.cd-section {
   padding: 70px 0 0 0;
-}
+}*/
 
 .modal-photo {
   background-size:cover
@@ -119,7 +119,13 @@ animation-delay:0.6s;
 }
 
 /* Social sidebar */
-.social, .social-hide, .social-show{
+@media screen and (max-width: 600px){
+  .social {
+    visibility: hidden;
+  }
+}
+
+.social{
   position: fixed;
   z-index: 999999;
   top: 30%;
@@ -195,3 +201,39 @@ animation-delay:0.6s;
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
 }
+
+
+/* NAVIGATION */
+nav.stroke ul li a,
+nav.stroke ul li a:after,
+nav.stroke ul li a:before {
+  transition: all .5s;
+}
+
+nav.stroke ul li a:hover{
+  color: #b1d062 !important;
+}
+nav.stroke ul li a{
+  position: relative;
+}
+nav.stroke ul li a:after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #b1d062;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+
+
+/*.navbar-nav li .dropdown-menu:after, .navbar-nav li .dropdown-menu:before{
+  border-bottom: 11px solid red;
+}*/

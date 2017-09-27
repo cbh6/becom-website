@@ -115,6 +115,16 @@ function initContactUsMap(){
 
 }
 
+// Show dropdown menu when hover nav-link
+$('.nav-item.dropdown:not(.dropdown-menu)').hover(function(){
+  if ($(window).width() > 720) {
+    $(this).toggleClass('show');
+  }
+})
+
+$('.nav-link[href="que-hacemos.html"]').click(function(){
+  window.location.href = "que-hacemos.html";
+})
 
 // $('.social-show').click(function() {
 //   $('.social').toggle(function() {

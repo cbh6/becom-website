@@ -37,7 +37,7 @@
 
 <body class="off-canvas-menu">
 
-  <nav class="navbar navbar-toggleable-md fixed-top nav-down">
+  <nav class="navbar navbar-toggleable-md fixed-top nav-down stroke">
     <div class="container">
       <div class="navbar-translate">
         <button class="navbar-toggler navbar-toggler-right navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,10 +58,16 @@
                             Inicio
                         </a>
           </li>
-          <li class="nav-item">
-            <a id="queHacemos" class="nav-link" href="que-hacemos.html">
-                            Qué hacemos
-                        </a>
+          <li class="nav-item dropdown">
+              <a id="queHacemos" class="nav-link" data-toggle="dropdown" href="que-hacemos.html" role="button" aria-haspopup="true" aria-expanded="false">Qué hacemos</a>
+              <ul class="dropdown-menu dropdown-menu-right dropdown-warning">
+                  <li class="dropdown-item"><a href="publicidad-marketing.html"><i class="nc-icon nc-spaceship"></i>Publicidad y Marketing</a></li>
+                  <li class="dropdown-item"><a href="branding.html"><i class="nc-icon nc-touch-id"></i>Branding</a></li>
+                  <li class="dropdown-item"><a href="web.html"><i class="nc-icon nc-cloud-upload-94"></i>Web</a></li>
+                  <li class="dropdown-item"><a href="creatividad.html"><i class="nc-icon nc-umbrella-13"></i>Creatividad</a></li>
+                  <li class="dropdown-item"><a href="social.html"><i class="nc-icon nc-chat-33"></i>Social</a></li>
+                  <li class="dropdown-item"><a href="grafico-fotografia.html"><i class="nc-icon nc-tie-bow"></i>Diseño gráfico y Fotografía</a></li>
+              </ul>
           </li>
           <li class="nav-item">
             <a id="nosotros" class="nav-link" href="nosotros.html">
