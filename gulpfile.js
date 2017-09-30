@@ -12,7 +12,7 @@ var
 	less				= require('gulp-less'),
 	sass 				= require('gulp-sass'),
 	LessPluginCleanCSS = require('less-plugin-clean-css'),
-  LessPluginAutoPrefix = require('less-plugin-autoprefix');
+  	LessPluginAutoPrefix = require('less-plugin-autoprefix');
 
 
 var
@@ -65,7 +65,7 @@ gulp.task('img', function() {
 });
 
 gulp.task('html', function() {
-	gulp.src([srcDir + 'html/*.html'])
+	gulp.src([srcDir + 'html/**/*.html'])
 		.pipe(include())
 			.on('error', console.log)
     .pipe(gulp.dest('./' + buildDir))
@@ -76,6 +76,21 @@ gulp.task('clean', function() {
 	return del([
 		buildDir + '**/*'
 	]);
+});
+
+gulp.task('css', function(){
+  return gulp.src(srcDir + 'styles/**/*.css')
+      .pipe(gulp.dest(assetsDir + 'css'));
+});
+
+// PaperKit Lib building
+gulp.task('paperkit-css', function(){
+  return gulp.src('lib/PaperKit/css/*.css')
+      .pipe(gulp.dest(assetsDir + 'css'));
+});
+gulp.task('paperkit-fonts', function(){
+  return gulp.src('lib/PaperKit/fonts/*')
+      .pipe(gulp.dest(assetsDir + 'fonts'));
 });
 
 
@@ -103,8 +118,11 @@ gulp.task('connect', function() {
 	});
 });
 
-// Default task
+// Lib task
+gulp.task('lib', ['paperkit-css', 'paperkit-fonts']);
+
+// watch task
 gulp.task('watch', ['default', 'connect', 'monitor']);
 
 // Default task
-gulp.task('default', ['sass', 'js', 'html']);
+gulp.task('default', ['sass', 'css', 'js', 'html', 'img', 'lib']);

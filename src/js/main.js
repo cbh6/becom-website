@@ -1,3 +1,4 @@
+//=require ../../lib/PaperKit/js/jquery-3.2.1.min.js
 //=require ../../lib/PaperKit/js/jquery-ui-1.12.1.custom.min.js
 //=require ../../lib/PaperKit/js/tether.min.js
 //=require ../../lib/PaperKit/js/bootstrap.min.js
