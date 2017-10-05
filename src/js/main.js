@@ -134,3 +134,22 @@ $('.nav-link[href="que-hacemos.html"]').click(function(){
 //       });
 //     });
 // });
+
+/**
+ * Listen to scroll to change header opacity class
+ */
+function checkScroll(){
+    var startY = $('.navbar').height() * 2; //The point where the navbar changes in px
+
+    if($(window).scrollTop() > startY){
+        $('.navbar').removeClass("transparent");
+    }else{
+        $('.navbar').addClass("transparent");
+    }
+}
+
+if($('.navbar').length > 0){
+    $(window).on("scroll load resize", function(){
+        checkScroll();
+    });
+}

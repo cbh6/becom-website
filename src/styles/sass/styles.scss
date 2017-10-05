@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
 @import url('https://fonts.googleapis.com/css?family=Days+One|PT+Sans+Caption:700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700');
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, a, .td-name, td, button, input, select, textarea,
 .title, .card-title, .info-title, .footer-brand, .footer-big h5, .footer-big h4, .media .media-heading {
   font-family: 'Muli', sans-serif;
@@ -238,3 +240,37 @@ nav.stroke ul li a:hover:after {
 /*.navbar-nav li .dropdown-menu:after, .navbar-nav li .dropdown-menu:before{
   border-bottom: 11px solid red;
 }*/
+
+
+/* Add the below transitions to allow a smooth color change similar to lyft */
+.navbar {
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+}
+
+.navbar.transparent {
+    background: transparent; 
+    box-shadow: none;
+    color: black !important;
+    font-size: 18px !important;
+}
+
+  .nav-down{
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .nav-down a{
+    font-family: 'Montserrat', sans-serif; 
+     color: black !important;
+    font-size: 18px !important;
+  }
+
+  .nav-up{
+    background-color: white;
+    box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+  }
+

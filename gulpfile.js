@@ -107,6 +107,7 @@ gulp.task('connect', function() {
 	connect.server({
 		root: [buildDir],
 		livereload: true,
+		port: 3000,
 		middleware: function(){
 			return [
 				modRewrite([
