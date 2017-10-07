@@ -6,14 +6,19 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, a, .td
 .title, .card-title, .info-title, .footer-brand, .footer-big h5, .footer-big h4, .media .media-heading {
   font-family: 'Muli', sans-serif;
 }
-.navbar-brand>img {
+
+.content-index{
+  top:20% !important
+}
+
+.navbar-brand img {
   height: 100px;
   width: 200px;
 }
 
 .navbar .navbar-brand {
   margin: auto;
-  padding: 0px 0px 3px 0px;
+  padding: 10px 0px 10px 0px;
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
@@ -251,26 +256,32 @@ nav.stroke ul li a:hover:after {
     transition: all 0.6s ease-out;
 }
 
-.navbar.transparent {
+.transparent {
     background: transparent; 
     box-shadow: none;
-    color: black !important;
-    font-size: 18px !important;
 }
 
-  .nav-down{
-    background-color: transparent;
-    box-shadow: none;
-  }
-
-  .nav-down a{
+.transparent a{
+    font-size: 16px !important;
     font-family: 'Montserrat', sans-serif; 
-     color: black !important;
-    font-size: 18px !important;
-  }
+}
 
-  .nav-up{
-    background-color: white;
-    box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
-  }
+.nav-down{
+  background-color: transparent;
+  box-shadow: none;
+}
 
+.nav-down a{
+  font-family: 'Montserrat', sans-serif; 
+   color: black !important;
+  font-size: 18px !important;
+}
+
+.nav-up{
+  background-color: white;
+  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+}
+
+.height-250{
+  height:250px;
+}

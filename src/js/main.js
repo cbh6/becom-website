@@ -143,8 +143,11 @@ function checkScroll(){
 
     if($(window).scrollTop() > startY){
         $('.navbar').removeClass("transparent");
+        $('#logo').attr('src', 'assets/img/logosinfondonegro.png');
     }else{
         $('.navbar').addClass("transparent");
+        if(!$('#inicio').hasClass('becom-color'))
+          $('#logo').attr('src', 'assets/img/logosinfondoblanco.png');
     }
 }
 
