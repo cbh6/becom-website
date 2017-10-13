@@ -48,12 +48,19 @@ gulp.task('less', function(){
 });
 
 gulp.task('js', function(){
-	return gulp.src(srcDir + 'js/**/*.js')
+	return gulp.src(srcDir + 'js/main.js')
 		.pipe(concat('main.js'))
 		.pipe(include())
 			.on('error', console.log)
 		.pipe(gulpif(env.p, uglify()))
 		.pipe(gulp.dest(assetsDir + 'js/'))
+		.pipe(connect.reload());
+});
+
+gulp.task('mail', function(){
+	return gulp.src(srcDir + 'php/sendmail.php')
+		.pipe(concat('sendmail.php'))
+    	.pipe(gulp.dest('./' + buildDir))
 		.pipe(connect.reload());
 });
 
@@ -126,4 +133,4 @@ gulp.task('lib', ['paperkit-css', 'paperkit-fonts']);
 gulp.task('watch', ['default', 'connect', 'monitor']);
 
 // Default task
-gulp.task('default', ['sass', 'css', 'js', 'html', 'img', 'lib']);
+gulp.task('default', ['sass', 'css', 'js', 'html', 'img', 'lib', 'mail']);

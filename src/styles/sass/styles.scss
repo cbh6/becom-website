@@ -1,10 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
 @import url('https://fonts.googleapis.com/css?family=Days+One|PT+Sans+Caption:700');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,700,900|Alegreya+Sans:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, a, .td-name, td, button, input, select, textarea,
 .title, .card-title, .info-title, .footer-brand, .footer-big h5, .footer-big h4, .media .media-heading {
   font-family: 'Muli', sans-serif;
+}
+
+video {
+  height: auto;
+}
+
+.big-map {
+  height: 500px !important;
+}
+
+.page-header{
+  background-color: white;
 }
 
 .content-index{
@@ -21,8 +36,23 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, a, .td
   padding: 10px 0px 10px 0px;
 }
 
-.navbar .navbar-nav .nav-item .nav-link {
+.navbar .navbar-nav .nav-item, .nav-link {
   font-size: 14px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 900;
+}
+
+.nav-link-transparent {
+  font-size: 20px !important;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 900;
+  color:white !important;
+  text-shadow: 1px 1px 2px black, 0 0 25px gray, 0 0 5px black;
+}
+
+.dropdown-item a{
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 700;
 }
 
 @media(min-width: 1200px){
@@ -49,7 +79,7 @@ animation-delay:0.6s;
 }
 
 .modal-photo, .modal-info {
-   background-color: #FFF;
+   background-color: white;
 
    padding: 24px 0px 24px 0px;
    width: 50%;
@@ -102,20 +132,6 @@ animation-delay:0.6s;
 
 .contact-us .contact .form-control {
     margin-bottom: 20px;
-}
-
-.becom-background-color{
-  background-color: #b1d062;
-  border-color: #b1d062;
-}
-
-.becom-background-color-2{
-  background-color: #92b1bd;
-  border-color: #92b1bd;
-}
-
-.becom-color{
-  color: #b1d062 !important;
 }
 
 .card-img-top {
@@ -242,8 +258,9 @@ nav.stroke ul li a:after{
   width: 0%;
   content: '.';
   color: transparent;
-  background: #b1d062;
+  background: #ADD149;
   height: 1px;
+  text-shadow: none !important;
 }
 nav.stroke ul li a:hover:after {
   width: 100%;
@@ -270,10 +287,9 @@ nav.stroke ul li a:hover:after {
     box-shadow: none;
 }
 
-.transparent a {
-    font-size: 16px !important;
-    font-family: 'Montserrat', sans-serif; 
-}
+// .transparent a {
+//     font-size: 16px !important;
+// }
 
 .nav-down{
   background-color: transparent;
@@ -282,7 +298,7 @@ nav.stroke ul li a:hover:after {
 
 .nav-down a{
   font-family: 'Montserrat', sans-serif; 
-   color: black !important;
+  color: black !important;
   font-size: 18px !important;
 }
 
@@ -293,10 +309,6 @@ nav.stroke ul li a:hover:after {
 
 .height-250 {
   height:250px;
-}
-
-.section-becom {
-  background-color: #b1d062;
 }
 
 .video-container {
@@ -313,4 +325,149 @@ nav.stroke ul li a:hover:after {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+// Becom Text
+.bold {
+  font-weight: bold;
+}
+
+.thin-text-font-400 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.thin-text-font-700 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.font-med {
+  font-size:1.2em;
+}
+.font-small {
+  font-size:0.8em;
+}
+
+.text-font {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 400;
+}
+
+.huge-text-font {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 700;
+}
+
+.huge-text-font-montserrat {
+ font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.libre-text {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.font-2em {
+  font-size: 2em !important;
+}
+.font-1em{
+  font-size: 1em !important;
+}
+.font-title-huge {
+  font-size: 1.5em !important;
+}
+.font-title-little {
+  font-size: 1.2em !important;
+}
+// Becom colours
+.white {
+  color: white;
+}
+.black {
+  color: black;
+}
+.dark-gray {
+  color: #151515;
+}
+.gray {
+  color: gray;
+}
+// Becom yellow
+.becom-background-yellow {
+  background-color: #FFB634;
+  border-color: #FFB634;
+}
+.becom-yellow {
+  color: #FFB634;
+}
+
+// Becom Green
+.becom-background-color{
+  background-color: #b1d062;
+  border-color: #b1d062;
+}
+.becom-color{
+  color: #ADD149 !important;
+}
+
+// Becom blue
+.becom-background-blue{
+  background-color: #92b1bd;
+  border-color: #92b1bd;
+}
+.becom-blue {
+  color: #92b1bd;
+}
+
+// Becom Green 2
+.becom-background-green2 {
+  background-color: #ADD149;
+}
+
+.becom-green2 {
+  color: #ADD149;
+}
+
+// Becom list
+.vosotros-list {
+  list-style: none;
+}
+
+// Floats
+.f-right{
+  float:right;
+}
+
+// Margins
+.m-right-20 {
+  margin-right: 20px;
+}
+
+.m-right-40 {
+  margin-right: 40px;
+}
+
+.m-right-60 {
+  margin-right: 60px;
+}
+
+.m-right-80 {
+  margin-right: 80px;
+}
+
+.m-left-20 {
+  margin-left: 20px;
+}
+
+.m-left-40 {
+  margin-left: 40px;
+}
+
+.m-left-60 {
+  margin-left: 60px;
+}
+
+.m-left-80 {
+  margin-left: 80px;
 }

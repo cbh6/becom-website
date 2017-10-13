@@ -6,7 +6,8 @@
     <div class="row">
       <div class="col-md-10 offset-md-1">
         <div class="card card-contact no-transition">
-          <h3 class="card-title text-center">Contacta con nosotros</h3>
+          <h3 class="text-center huge-text-font-montserrat bold becom-yellow">COMUNÍCATE CON NOSOTROS</h3>
+          <p class="text-center thin-text-font-400"><br>Si quieres una <span class="thin-text-font-700 font-med">idea</span> ¡te la damos! Si la tienes ¡<span class="thin-text-font-700 font-med">la materializamos</span>!</p>
           <div class="row">
             <div class="col-md-5 offset-md-1">
               <div class="card-block">
@@ -15,8 +16,8 @@
                     <i class="nc-icon nc-pin-3" aria-hidden="true"></i>
                   </div>
                   <div class="description">
-                    <h4 class="info-title">Encuéntranos en la oficina</h4>
-                    <p> Rambla Méndez Núñez, nr. 8,<br> 7652 Alicante,<br> España
+                    <h4 class="info-title">Te esperamos en la oficina</h4>
+                    <p> Rambla Méndez Núñez, 44, 9C,<br> 03002 Alicante,<br> España
                     </p>
                   </div>
                 </div>
@@ -26,32 +27,32 @@
                   </div>
                   <div class="description">
                     <h4 class="info-title">Llámanos</h4>
-                    <p> Michael Jordan<br> +35 666 777 666<br> Lun - Vie, 8:00-22:00
+                    <p>669366222 <i class="fa fa-whatsapp"></i><br> 965158691<br> <span class="becom-color">¡Siempre damos señales de vida!</span>
                     </p>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-md-5">
-              <form role="form" id="contact-form" method="post">
+              <form role="form" id="contact-form" method="post" action="sendmail.php">
                 <div class="card-block">
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group label-floating">
                         <label class="control-label">Nombre</label>
-                        <input type="text" name="name" class="form-control" placeholder="Nombre">
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Nombre">
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group label-floating">
                         <label class="control-label">Apellidos</label>
-                        <input type="text" name="name" class="form-control" placeholder="Apellidos">
+                        <input type="text" name="name" id="lastName" class="form-control" placeholder="Apellidos">
                       </div>
                     </div>
                   </div>
                   <div class="form-group label-floating">
                     <label class="control-label">Email</label>
-                    <input type="email" name="email" class="form-control" placeholder="Email" />
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Email" />
                   </div>
                   <div class="form-group label-floating">
                     <label class="control-label">Mensaje</label>
@@ -63,12 +64,12 @@
                       <div class="checkbox">
                         <input id="checkbox1" type="checkbox">
                         <label for="checkbox1">
-                          No soy un robot
+                          Turing test (no eres un robot)
                         </label>
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <button type="submit" class="btn becom-background-color-2 pull-right">Enviar</a>
+                      <button type="submit" class="btn becom-background-yellow pull-right">Enviar</a>
                     </div>
                   </div>
                 </div>
