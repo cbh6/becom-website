@@ -43,19 +43,27 @@ video {
 }
 
 .nav-link-transparent {
-  font-size: 20px !important;
-  font-family: 'Alegreya Sans SC', sans-serif;
-  font-weight: 900;
-  color:white !important;
-  text-shadow: 1px 1px 2px black, 0 0 25px gray, 0 0 5px black;
+
+  // text-shadow: 1px 1px 2px black, 0 0 25px gray, 0 0 5px black;
 }
+
+@media(min-width: 992px){
+  .nav-link-transparent {
+      font-size: 20px !important;
+      font-family: 'Alegreya Sans SC', sans-serif;
+      font-weight: 900;
+      color:white !important;
+      text-shadow: 1px 1px 2px black, 0 0 25px gray, 0 0 5px black;
+  }
+}
+
 
 .dropdown-item a{
   font-family: 'Alegreya Sans SC', sans-serif;
   font-weight: 700;
 }
 
-@media(min-width: 1200px){
+@media(min-width: 1400px){
   .navbar-translate {
     margin-left: -100px;
   }
@@ -103,7 +111,6 @@ animation-delay:0.6s;
 
 .closeButton {
   float: right;
-  color: white;
 }
 
 
@@ -375,7 +382,7 @@ nav.stroke ul li a:hover:after {
   font-size: 1em !important;
 }
 .font-title-huge {
-  font-size: 1.5em !important;
+  font-size: 1.6em !important;
 }
 .font-title-little {
   font-size: 1.2em !important;
@@ -470,4 +477,19 @@ nav.stroke ul li a:hover:after {
 
 .m-left-80 {
   margin-left: 80px;
+}
+
+
+.carousel-indicators .active {
+  background-color: #ADD149;
+}
+
+.carousel-control {
+  background-color: #151515;
+  color: white;
+}
+
+.carousel-control:hover, .carousel-control:focus {
+  background-color: #ADD149;
+  color: #151515;
 }

@@ -52,7 +52,17 @@ gulp.task('js', function(){
 		.pipe(concat('main.js'))
 		.pipe(include())
 			.on('error', console.log)
-		.pipe(gulpif(env.p, uglify()))
+		.pipe(uglify())
+		.pipe(gulp.dest(assetsDir + 'js/'))
+		.pipe(connect.reload());
+});
+
+gulp.task('scrolljs', function(){
+	return gulp.src(srcDir + 'js/scroll.js')
+		.pipe(concat('scroll.js'))
+		.pipe(include())
+			.on('error', console.log)
+		.pipe(uglify())
 		.pipe(gulp.dest(assetsDir + 'js/'))
 		.pipe(connect.reload());
 });
@@ -133,4 +143,4 @@ gulp.task('lib', ['paperkit-css', 'paperkit-fonts']);
 gulp.task('watch', ['default', 'connect', 'monitor']);
 
 // Default task
-gulp.task('default', ['sass', 'css', 'js', 'html', 'img', 'lib', 'mail']);
+gulp.task('default', ['sass', 'css', 'js', 'scrolljs', 'html', 'img', 'lib', 'mail']);
