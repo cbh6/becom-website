@@ -19,7 +19,7 @@
 
     $success = @mail($email_to, $subject, $body, 'From: <'.$email_from.'>');
 
-    header('Location: http://wwww.autoprob.esy.es');
+    header('Location: http://www.autoprob.esy.es');
     exit();
     die; 
 
