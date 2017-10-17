@@ -13,13 +13,13 @@
     $subject = 'Web Agencia Becom - Mail'; 
 
     $email_from = $email;
-    $email_to = 'cri.bh6@gmail.com';
+    $email_to = 'info.agenciabecom@gmail.com';
 
     $body =  $asunto . "\n\n" . 'Subject: ' . $subject . "\n\n" . 'Nombre: ' . $name . "\n\n" . 'Apellidos : ' . $lastName . "\n\n" . 'Email: ' . $email . "\n\n" . 'Message: ' . $message;
 
     $success = @mail($email_to, $subject, $body, 'From: <'.$email_from.'>');
 
-    header('Location: http://www.autoprob.esy.es');
+    header('Location: http://becomcomunicacion.com');
     exit();
     die; 
 

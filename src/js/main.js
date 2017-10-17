@@ -16,7 +16,12 @@
 
 $(window).on('load', function() {
   AOS.init();
-  checkScroll();
+  checkScroll(); 
+  
+  // if(window.screen.width < 991){
+  //   $('.navbar').removeClass('navbar-toggleable-md fixed-top transparent stroke');
+  // }
+  
 });
 
 
