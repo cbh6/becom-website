@@ -1,0 +1,19 @@
+<script>
+// Replace header (img or video) depending on screen size
+
+  function replaceContent(){
+    if (window.innerWidth < 991) {
+      $('.header-photo').removeClass('hide');
+      $('.header-video').addClass('hide');
+    } else if (window.innerWidth > 991) {
+      $('.header-photo').addClass('hide');
+      $('.header-video').removeClass('hide');
+    }
+  }
+
+  replaceContent();
+  
+  $(window).resize(function() {
+    replaceContent();
+  });
+</script>

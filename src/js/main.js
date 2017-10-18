@@ -1,5 +1,3 @@
-//=require ../../lib/PaperKit/js/jquery-3.2.1.min.js
-//=require ../../lib/PaperKit/js/jquery-ui-1.12.1.custom.min.js
 //=require ../../lib/PaperKit/js/tether.min.js
 //=require ../../lib/PaperKit/js/bootstrap.min.js
 //=require ../../lib/PaperKit/js/bootstrap-switch.min.js
@@ -14,15 +12,12 @@
 //=require ../../lib/PaperKit/js/bootstrap-datetimepicker.min.js
 //=require ../../lib/PaperKit/js/paper-kit.js
 
+// On load
 $(window).on('load', function() {
   AOS.init();
   checkScroll(); 
-  
-  // if(window.screen.width < 991){
-  //   $('.navbar').removeClass('navbar-toggleable-md fixed-top transparent stroke');
-  // }
-  
 });
+
 
 
 function onViewport(el, elClass, offset, callback) {
@@ -84,8 +79,19 @@ $(document).on('click', '.card-img-top', function() {
     }
   };
 
-  new Custombox.modal(optionsInfo).open();
-  new Custombox.modal(optionsPhoto).open();
+  if($(window).width() > 991){ // Big
+    $('.modal-photo,.modal-info').css({ width: "50%", height: "100%" });
+
+
+    new Custombox.modal(optionsInfo).open();
+    new Custombox.modal(optionsPhoto).open();
+  }else{ // Small
+    $('.modal-info').css({ width: "100%", height: "100%" });
+
+    new Custombox.modal(optionsInfo).open();
+  }
+
+
 });
 
 $(document).on('click', '.custombox-content', function() {
@@ -132,35 +138,3 @@ $('.nav-link[href="que-hacemos.html"]').click(function(){
   window.location.href = "que-hacemos.html";
 })
 
-// $('.social-show').click(function() {
-//   $('.social').toggle(function() {
-//       $('.social').animate({
-//         left: 0
-//       });
-//     });
-// });
-
-/**
- * Listen to scroll to change header opacity class
- */
-// function checkScroll(){
-//     var startY = $('.navbar').height() * 2; //The point where the navbar changes in px
-
-//     if($(window).scrollTop() > startY){
-//         $('.navbar').removeClass("transparent");
-//         $('.nav-link').removeClass("nav-link-transparent");
-//         $('#logo').attr('src', 'assets/img/logosinfondonegro.png');
-        
-//     }else{
-//         $('.navbar').addClass("transparent");
-//         $('.nav-link').addClass("nav-link-transparent");
-//         if(!$('#inicio').hasClass('becom-color'))
-//           $('#logo').attr('src', 'assets/img/logosinfondoblanco.png');
-//     }
-// }
-
-// if($('.navbar').length > 0){
-//     $(window).on("scroll load resize", function(){
-//         checkScroll();
-//     });
-// }

@@ -16,7 +16,7 @@ function checkScroll(){
     }else{
         $('.navbar').addClass("transparent");
         $('.nav-link').addClass("nav-link-transparent");
-        if($('#inicio').hasClass('becom-color')) $('#logo').attr('src', 'assets/img/logosinfondonegro.png');
+        if($('#inicio, #nosotros').hasClass('becom-color')) $('#logo').attr('src', 'assets/img/logosinfondonegro.png');
         else $('#logo').attr('src', 'assets/img/logosinfondoblanco.png');
 
     }
