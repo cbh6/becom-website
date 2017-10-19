@@ -513,3 +513,16 @@ nav.stroke ul li a:hover:after {
   text-decoration:none;
   color:white;
 }
+
+// Alternative filter
+.page-header .filter-alt::after {
+  background-color: rgba(0,0,0,.07);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
